@@ -1,34 +1,12 @@
 import React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import * as styles from './index.module.css'
-import Layout from "../components/Layout/layout"
+import Layout from "../components/Layout/Layout"
 
 const IndexPage = () => {
 
   return (
     <Layout>
-      <header>
-        <div className={ styles.headerImgs }>
-          <StaticImage src='../assets/icons/ic.menu.svg' alt='Mobile menu icon'
-            quality={ 90 } width={ 24 } height={ 24 }
-          />
-          <StaticImage src='../assets/images/Module 1 - Header 970x60025@2x.png' alt='Intibiome logo'
-            quality={ 90 } width={ 195 } height={ 79 }
-          />
-          <StaticImage src='../assets/icons/ic.search.svg' alt='Search icon'
-            quality={ 90 } width={ 24 } height={ 24 }
-          />
-        </div>
-        <div className={ styles.headerNav }>
-          <p className={ styles.navItem } >about us v</p>
-          <p className={ styles.navItem } >our products v</p>
-          <p className={ styles.navItem } >intimate health v</p>
-          <p className={ styles.navItem } >contact us</p>
-        </div>
-        <StaticImage src='../assets/images/banner-hero@2x.png' alt='banner'
-          quality={ 90 } height={ 550 }
-        />
-      </header>
       <main>
         <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>we're here to help</h2>
@@ -122,15 +100,6 @@ const IndexPage = () => {
           <button className={ styles.button }>see more</button>
         </section>
       </main>
-      <footer className={ styles.footer }>
-        <div className={ styles.footerNav }>
-          <p>contact us | faq | site map | privacy policy | cookies policy | legal notice</p>
-        </div>
-        <div className={ styles.footerImgs }>
-          <StaticImage src='../assets/images/Image 1@2x.png' alt='U-labs logo' quality={ 90 } width={ 116 } height={ 29 }/>
-          <StaticImage src='../assets/icons/Layer 2.svg' alt='Instagram logo' quality={ 90 } width={ 42.55 } height={ 42.55 }/>
-        </div>
-      </footer>
     </Layout>
   )
 }
