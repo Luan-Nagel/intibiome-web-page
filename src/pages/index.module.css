@@ -1,0 +1,109 @@
+.headerImgs {
+  width: 100%;
+  height: 79px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.headerNav {
+  width: 100%;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #389cd6;
+  color: #fff;
+}
+
+.navItem {
+  margin: 0 35px;
+}
+
+.section {
+  text-align: center;
+}
+
+.sectionTitle {
+  color: #389cd6;
+  font-size: 39px;
+  line-height: 50px;
+  letter-spacing: 0.78px;
+}
+
+.sectionText {
+  width: 550px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #7b7070;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+}
+
+.articles,
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productCard {
+  width: 356px;
+  height: 530px;
+  border-radius: 16px;
+  box-shadow: 0 3px 16px #00000014;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 16px;
+}
+
+.productDescription, .articleSummary {
+  /* margin: 0; */
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  color: #7b7070;
+}
+
+.productType {
+  /* margin: auto; */
+  font-size: 25px;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+  
+.prodWellness {
+  background-color: #389cd6;
+  height: 73px;
+}
+
+.prodActive {
+  background-color: #309d5f;
+  height: 73px;
+}
+
+.prodAgecare {
+  background-color: #ee6381;
+  height: 73px;
+}
+
+
+.articleCard {
+  width: 356px;
+  height: 355px;
+  border-radius: 16px;
+  box-shadow: 0 3px 16px #00000014;
+  overflow: hidden;
+  margin: 16px;
+  border: none;
+}
+
+.articleSummary {
+  margin: 0 auto;
+  text-align: left;
+}
