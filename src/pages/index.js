@@ -1,11 +1,12 @@
 import React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import * as styles from './index.module.css'
+import Layout from "../components/Layout/layout"
 
 const IndexPage = () => {
 
   return (
-    <>
+    <Layout>
       <header>
         <div className={ styles.headerImgs }>
           <StaticImage src='../assets/icons/ic.menu.svg' alt='Mobile menu icon'
@@ -100,37 +101,37 @@ const IndexPage = () => {
           <h2 className={ styles.sectionTitle }>keep up to date with our discoveries</h2>
           <div className={ styles.articles }>
             <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2@2x.png' alt='' />
+              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2@2x.png' alt='' quality={ 90 }/>
               <div className={ styles.articleSummary }>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1@2x.png' alt='' />
+              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1@2x.png' alt='' quality={ 90 }/>
               <div className={ styles.articleSummary }>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47@2x.png' alt='' />
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47@2x.png' alt='' quality={ 90 }/>
+              {/* <div className={ styles.articleSummary }> */}
+                <p  className={ styles.articleSummary }>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              {/* </div> */}
             </div>
           </div>
-          <button>see more</button>
+          <button className={ styles.button }>see more</button>
         </section>
       </main>
-      <footer>
-        <div>
+      <footer className={ styles.footer }>
+        <div className={ styles.footerNav }>
           <p>contact us | faq | site map | privacy policy | cookies policy | legal notice</p>
         </div>
-        <div>
-          <StaticImage src='../assets/images/Image 1@2x.png' alt='U-labs logo' />
-          <StaticImage src='../assets/icons/Layer 2.svg' alt='Instagram logo' />
+        <div className={ styles.footerImgs }>
+          <StaticImage src='../assets/images/Image 1@2x.png' alt='U-labs logo' quality={ 90 } width={ 116 } height={ 29 }/>
+          <StaticImage src='../assets/icons/Layer 2.svg' alt='Instagram logo' quality={ 90 } width={ 42.55 } height={ 42.55 }/>
         </div>
       </footer>
-    </>
+    </Layout>
   )
 }
 
