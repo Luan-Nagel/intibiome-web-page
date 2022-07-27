@@ -6,13 +6,13 @@ const Header = () => {
   return (
     <header>
       <div className={ styles.imgsContainer }>
-        <StaticImage src='../assets/icons/ic.menu.svg' alt='Mobile menu icon'
+        <StaticImage src='../../assets/icons/ic.menu.svg' alt='Mobile menu icon'
           quality={ 90 } width={ 24 } height={ 24 }
         />
-        <StaticImage src='../assets/images/Module 1 - Header 970x60025@2x.png' alt='Intibiome logo'
+        <StaticImage src='../../assets/images/Module 1 - Header 970x60025@2x.png' alt='Intibiome logo'
           quality={ 90 } width={ 195 } height={ 79 }
         />
-        <StaticImage src='../assets/icons/ic.search.svg' alt='Search icon'
+        <StaticImage src='../../assets/icons/ic.search.svg' alt='Search icon'
           quality={ 90 } width={ 24 } height={ 24 }
         />
       </div>
@@ -22,7 +22,7 @@ const Header = () => {
         <p className={ styles.navItem } >intimate health v</p>
         <p className={ styles.navItem } >contact us</p>
       </div>
-      <StaticImage src='../assets/images/banner-hero@2x.png' alt='banner'
+      <StaticImage src='../../assets/images/banner-hero@2x.png' alt='banner'
         quality={ 90 } height={ 550 }
       />
     </header>

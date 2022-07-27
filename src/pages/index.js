@@ -1,9 +1,13 @@
 import React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import * as styles from './index.module.css'
+import useWindowSize from "../hooks/useWindowSize"
 import Layout from "../components/Layout/Layout"
 
 const IndexPage = () => {
+
+  const { width } = useWindowSize()
+  console.log(width)
 
   return (
     <Layout>
@@ -71,7 +75,7 @@ const IndexPage = () => {
           </div>
         </section>
         <section>
-          <StaticImage src='../assets/images/Asset 22@2x.png' alt='Banner'
+          <StaticImage src='../assets/images/Asset 22@2x.png' alt='Products banner'
             quality={ 90 } height={ 437 }
           />
         </section>
@@ -79,19 +83,25 @@ const IndexPage = () => {
           <h2 className={ styles.sectionTitle }>keep up to date with our discoveries</h2>
           <div className={ styles.articles }>
             <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2@2x.png' alt='' quality={ 90 }/>
+              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2@2x.png' 
+                alt='Woman wearing sportswear and laughing' quality={ 90 }
+              />
               <div className={ styles.articleSummary }>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1@2x.png' alt='' quality={ 90 }/>
+              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1@2x.png' 
+                alt='Middle aged woman smiling' quality={ 90 }
+              />
               <div className={ styles.articleSummary }>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47@2x.png' alt='' quality={ 90 }/>
+              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47@2x.png' 
+                alt='Lorem ipsum dolor sit amet' quality={ 90 }
+              />
               {/* <div className={ styles.articleSummary }> */}
                 <p  className={ styles.articleSummary }>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               {/* </div> */}
