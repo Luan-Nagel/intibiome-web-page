@@ -16,7 +16,9 @@ const Footer = () => {
         { FOOTER_NAV.map((item, index) => (
           <Fragment key={ item.key }>
             <span>{ item.label }</span>
-            { index < FOOTER_NAV.length-1 && <div style={{ width: isMobile ? '24px' : '2px', height: isMobile ? '2px' : '24px', backgroundColor: '#fff' }} />}
+            { index < FOOTER_NAV.length-1 && 
+              <div style={{ width: isMobile ? '24px' : '2px', height: isMobile ? '2px' : '24px', backgroundColor: '#fff' }} />
+            }
           </Fragment>
         )) }
       </div>

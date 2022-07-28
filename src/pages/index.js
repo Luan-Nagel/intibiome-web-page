@@ -88,33 +88,17 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section className={ styles.section }>
+        <section className={ styles.slider }>
           <Slider {...sliderSettings}>
-            <div className={ styles.productCard }>
-              <StaticImage src='../assets/images/image mask-2@2x.png' alt='Wellness' quality={ 90 } />
-              <div>
-                <p className={ styles.productDescription }>intibiome wellness daily intimate wash</p>
-              </div>
-              <div className={ styles.prodWellness }>
-                <p className={ styles.productType }>wellness</p>
-              </div>
-            </div>
-            <div className={ styles.productCard }>
-              <StaticImage src='../assets/images/image mask-1@2x.png' alt='Active' quality={ 90 } />
-              <div className={ styles.productDescription }>
-                <p>intibiome active extra protection intimate wash</p>
-              </div>
-              <div className={ styles.prodActive }>
-                <p className={ styles.productType }>active</p>
-              </div>
-            </div>
-            <div className={ styles.productCard }>
-              <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 } />
-              <div className={ styles.productDescription }>
-                <p>intibiome agecare dryness relief intimate wash</p>
-              </div>
-              <div className={ styles.prodAgecare }>
-                <p className={ styles.productType }>agecare</p>
+            <div className={ styles.cardContainer }>
+              <div className={ styles.card }>
+                <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 }/>
+                <div className={ styles.description }>
+                  <p>intibiome agecare dryness relief intimate wash</p>
+                </div>
+                <div className={ styles.type }>
+                  <p >agecare</p>
+                </div>
               </div>
             </div>
           </Slider>

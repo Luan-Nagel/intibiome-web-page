@@ -116,6 +116,46 @@
   background-color: #2b7cab;
 }
 
+
+
+.slider {
+  /* margin: 0 auto; */
+}
+
+.cardContainer {
+  padding: 10px;
+}
+
+.card {
+  border-radius: 16px;
+  box-shadow: 0 3px 16px #00000014;
+  overflow: hidden;
+  width: 360px;
+}
+
+.description {
+  height: 120px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  color: #7b7070;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type {
+  height: 73px;
+  background-color: #2b7cab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
 @media (max-width: 750px) {
   .sectionTitle, .sectionText, .sectionTextTwo {
     width: 392px;
