@@ -7,7 +7,7 @@ import Layout from "../components/Layout/Layout"
 const IndexPage = () => {
 
   const { width } = useWindowSize()
-  console.log(width)
+  const isMobile = width < 600
 
   return (
     <Layout>
@@ -29,6 +29,7 @@ const IndexPage = () => {
           </div>
           <StaticImage src='../assets/icons/icons@2x.png' alt='icones' quality={ 90 } />
         </section>
+
         <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>whatever your age. whatever your lifestyle. whatever your interests.</h2>
           <div className={ styles.sectionTextTwo }>
@@ -42,6 +43,7 @@ const IndexPage = () => {
             </p>
           </div>
         </section>
+
         <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>our products</h2>
           <div className={ styles.products }>
@@ -74,11 +76,16 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section>
-          <StaticImage src='../assets/images/Asset22@2x.png' alt='Products banner'
-            quality={ 90 } height={ 437 }
-          />
+
+        <section style={{ marginTop: '80px' }}>
+          { !isMobile && <StaticImage src='../assets/images/Asset22@2x.png' alt='Products banner'
+            quality={ 90 }
+          /> }
+          { isMobile && <StaticImage src='../assets/images/banner-intibiome-05@2x.png' alt='Products banner'
+            quality={ 90 }
+          />}
         </section>
+
         <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>keep up to date with our discoveries</h2>
           <div className={ styles.articles }>
@@ -87,7 +94,7 @@ const IndexPage = () => {
                 alt='Woman wearing sportswear and laughing' quality={ 90 }
               />
               <div className={ styles.articleSummary }>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p style={{ textAlign: 'left' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div className={ styles.articleCard }>
@@ -102,9 +109,9 @@ const IndexPage = () => {
               <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47@2x.png' 
                 alt='Lorem ipsum dolor sit amet' quality={ 90 }
               />
-              {/* <div className={ styles.articleSummary }> */}
-                <p  className={ styles.articleSummary }>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              {/* </div> */}
+              <div className={ styles.articleSummary }>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
             </div>
           </div>
           <button className={ styles.button }>see more</button>
