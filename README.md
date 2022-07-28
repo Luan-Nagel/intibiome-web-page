@@ -15,19 +15,19 @@
 
 ## :rocket: Run the project
 
-2.  **Navigate to the project directory**
+1.  **Navigate to the project directory**
 
   ```shell
   cd intibiome-web-page/
   ```
 
-3.  **Run the project locally**
+2.  **Run the project locally**
 
   ```shell
   npm run develop
   ```
 
-4.  **View the website**
+3.  **View the website**
 
   Go to `http://localhost:8000` in your favorite browser
 
