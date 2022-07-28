@@ -31,7 +31,7 @@ const IndexPage = () => {
         </section>
         <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>whatever your age. whatever your lifestyle. whatever your interests.</h2>
-          <div className={ styles.sectionText }>
+          <div className={ styles.sectionTextTwo }>
             <p>
               Co-created with gynaecologists, our revolutionary products have been expertly developed to 
               support your intimate microbiome and pH balance, and strengthen overall natural health.

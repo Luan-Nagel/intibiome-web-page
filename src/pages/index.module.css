@@ -1,21 +1,29 @@
 .section {
+
   text-align: center;
+  margin-top: 80px;
 }
 
 .sectionTitle {
+  margin: 0 auto;
+  width: 744px;
   color: #389cd6;
   font-size: 39px;
   line-height: 50px;
   letter-spacing: 0.78px;
 }
 
-.sectionText {
+.sectionText, .sectionTextTwo {
   width: 550px;
   margin: 0 auto;
   font-size: 20px;
   color: #7b7070;
   line-height: 28px;
   letter-spacing: 0.4px;
+}
+
+.sectionTextTwo {
+  width: 744px;
 }
 
 .articles,
@@ -100,4 +108,28 @@
 
 .button:hover {
   background-color: #2b7cab;
+}
+
+@media (max-width: 750px) {
+  .sectionTitle, .sectionText, .sectionTextTwo {
+    width: 392px;
+  }
+
+  .sectionTitle {
+    font-size: 31px;
+    line-height: 40px;
+    letter-spacing: 0.62px;
+  }
+
+  .sectionText, .sectionTextTwo {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.32px;
+  }
+}
+
+@media (max-width: 410px) {
+  .sectionTitle, .sectionText, .sectionTextTwo {
+    width: 90vw;
+  }
 }
