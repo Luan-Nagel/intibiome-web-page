@@ -1,11 +1,11 @@
 <p align="center">
-  <img alt="Gatsby" src="src/assets/images/intibiome-logo.png" width="200" />
+  <img alt="Gatsby" src="src/assets/images/intibiome-logo.png" width="250" />
 </p>
 
 ## :raised_hands: About
-Intibiome landing page
+  Landing page for Intibiome company. On the page are presented the company's products and articles related to its area of activity.
 
-## :wrench:	Installation
+## :file_folder:	Download
 
 1.  **Clone this repo**
 
@@ -17,17 +17,20 @@ Intibiome landing page
 
 2.  **Navigate to the project directory**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+  ```shell
+  cd intibiome-web-page/
+  ```
 
-    ```shell
-    cd intibiome-web-page/
-    ```
+3.  **Run the project locally**
 
-3.  **Start developing**
+  ```shell
+  npm run develop
+  ```
 
-    ```shell
-    npm run develop
-    ```
+4.  **View the website**
+
+  Go to `http://localhost:8000` in your favorite browser
+
 
 ## 🛠 Build with
 
