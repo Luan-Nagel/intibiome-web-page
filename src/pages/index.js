@@ -75,7 +75,7 @@ const IndexPage = () => {
           </div>
         </section>
         <section>
-          <StaticImage src='../assets/images/Asset 22@2x.png' alt='Products banner'
+          <StaticImage src='../assets/images/Asset22@2x.png' alt='Products banner'
             quality={ 90 } height={ 437 }
           />
         </section>
