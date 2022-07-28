@@ -1,4 +1,7 @@
 import React from "react"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
 import { StaticImage } from 'gatsby-plugin-image'
 import * as styles from './index.module.css'
 import useWindowSize from "../hooks/useWindowSize"
@@ -8,6 +11,14 @@ const IndexPage = () => {
 
   const { width } = useWindowSize()
   const isMobile = width < 600
+
+  const sliderSettings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToScroll: 1,
+    slidesToShow: 3
+  }
 
   return (
     <Layout>
@@ -75,6 +86,38 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className={ styles.section }>
+          <Slider {...sliderSettings}>
+            <div className={ styles.productCard }>
+              <StaticImage src='../assets/images/image mask-2@2x.png' alt='Wellness' quality={ 90 } />
+              <div>
+                <p className={ styles.productDescription }>intibiome wellness daily intimate wash</p>
+              </div>
+              <div className={ styles.prodWellness }>
+                <p className={ styles.productType }>wellness</p>
+              </div>
+            </div>
+            <div className={ styles.productCard }>
+              <StaticImage src='../assets/images/image mask-1@2x.png' alt='Active' quality={ 90 } />
+              <div className={ styles.productDescription }>
+                <p>intibiome active extra protection intimate wash</p>
+              </div>
+              <div className={ styles.prodActive }>
+                <p className={ styles.productType }>active</p>
+              </div>
+            </div>
+            <div className={ styles.productCard }>
+              <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 } />
+              <div className={ styles.productDescription }>
+                <p>intibiome agecare dryness relief intimate wash</p>
+              </div>
+              <div className={ styles.prodAgecare }>
+                <p className={ styles.productType }>agecare</p>
+              </div>
+            </div>
+          </Slider>
         </section>
 
         <section style={{ marginTop: '80px' }}>

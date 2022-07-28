@@ -1,5 +1,11 @@
 .footer {
   background-color: #389cd6;
+  width: 100%;
+  height: 222px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
 }
 
 .nav {
@@ -7,11 +13,44 @@
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.32px;
-  text-align: center;
+  margin: 0 auto;
+  width: 750px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .imgsContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.divider {
+  width: '2px';
+  height: '24px';
+  background-color: #fff;
+}
+
+@media (max-width: 790px) {
+  .nav {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer {
+    height: 766px;
+    padding: 20px 0;
+  }
+
+  .nav {
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgsContainer {
+    flex-direction: column-reverse;
+    height: 200px;
+  }
 }
