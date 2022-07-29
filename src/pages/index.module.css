@@ -1,19 +1,19 @@
 .section {
-
   text-align: center;
-  margin-top: 80px;
 }
 
 .sectionTitle {
-  margin: 0 auto;
+  margin: 80px auto 50px;
   width: 744px;
   color: #389cd6;
   font-size: 39px;
   line-height: 50px;
   letter-spacing: 0.78px;
+  text-align: center ;
 }
 
-.sectionText, .sectionTextTwo {
+.sectionText,
+.sectionTextTwo {
   width: 550px;
   margin: 0 auto;
   font-size: 20px;
@@ -119,7 +119,9 @@
 
 
 .slider {
-  /* margin: 0 auto; */
+  width: 90vw;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .cardContainer {
@@ -130,7 +132,8 @@
   border-radius: 16px;
   box-shadow: 0 3px 16px #00000014;
   overflow: hidden;
-  width: 360px;
+  width: 24vw;
+  margin: 0 auto;
 }
 
 .description {
@@ -142,11 +145,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 0 10px;
 }
 
-.type {
+.wellness,
+.active,
+.agecare {
   height: 73px;
-  background-color: #2b7cab;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,8 +162,28 @@
   color: #fff;
 }
 
+.wellness {
+  background-color: #2b7cab;
+}
+
+.active {
+  background-color: #309d5f;
+}
+
+.agecare{
+  background-color: #ee6381;
+}
+
+@media (max-width: 950px) {
+  .card{
+    width: 37vw;
+  }
+}
+
 @media (max-width: 750px) {
-  .sectionTitle, .sectionText, .sectionTextTwo {
+  .sectionTitle, 
+  .sectionText, 
+  .sectionTextTwo {
     width: 392px;
   }
 
@@ -167,10 +193,19 @@
     letter-spacing: 0.62px;
   }
 
-  .sectionText, .sectionTextTwo {
+  .sectionText, 
+  .sectionTextTwo {
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0.32px;
+  }
+
+  .card{
+    width: 60vw;
+  }
+
+  .cardContainer {
+    padding: 0;
   }
 }
 
@@ -178,4 +213,12 @@
   .sectionTitle, .sectionText, .sectionTextTwo {
     width: 90vw;
   }
+
+  /* .card{
+    width: 70vw;
+  } */
+
+  /* .slider {
+    width: 95vw;
+  } */
 }

@@ -13,11 +13,12 @@ const IndexPage = () => {
   const isMobile = width < 600
 
   const sliderSettings = {
-    dots: true,
+    centerMode: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToScroll: 1,
-    slidesToShow: 3
+    slidesToShow: width < 950 ? width < 750 ? 1 : 2 : 3
   }
 
   return (
@@ -55,48 +56,38 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section className={ styles.section }>
-          <h2 className={ styles.sectionTitle }>our products</h2>
-          <div className={ styles.products }>
-            <div className={ styles.productCard }>
-              <StaticImage src='../assets/images/image mask-2@2x.png' alt='Wellness' quality={ 90 } />
-              <div>
-                <p className={ styles.productDescription }>intibiome wellness daily intimate wash</p>
-              </div>
-              <div className={ styles.prodWellness }>
-                <p className={ styles.productType }>wellness</p>
-              </div>
-            </div>
-            <div className={ styles.productCard }>
-              <StaticImage src='../assets/images/image mask-1@2x.png' alt='Active' quality={ 90 } />
-              <div className={ styles.productDescription }>
-                <p>intibiome active extra protection intimate wash</p>
-              </div>
-              <div className={ styles.prodActive }>
-                <p className={ styles.productType }>active</p>
-              </div>
-            </div>
-            <div className={ styles.productCard }>
-              <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 } />
-              <div className={ styles.productDescription }>
-                <p>intibiome agecare dryness relief intimate wash</p>
-              </div>
-              <div className={ styles.prodAgecare }>
-                <p className={ styles.productType }>agecare</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className={ styles.slider }>
+          <h2 className={ styles.sectionTitle }>our products</h2>
           <Slider {...sliderSettings}>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 }/>
+                <StaticImage src='../assets/images/image mask-2@2x.png' alt='Agecare' quality={ 90 }/>
+                <div className={ styles.description }>
+                  <p>intibiome wellness daily intimate wash</p>
+                </div>
+                <div className={ styles.wellness }>
+                  <p >wellness</p>
+                </div>
+              </div>
+            </div>
+            <div className={ styles.cardContainer }>
+              <div className={ styles.card }>
+                <StaticImage src='../assets/images/image mask-1@2x.png' alt='Agecare' quality={ 90 }/>
+                <div className={ styles.description }>
+                  <p>intibiome active extra protection intimate wash</p>
+                </div>
+                <div className={ styles.active }>
+                  <p >active</p>
+                </div>
+              </div>
+            </div>
+            <div className={ styles.cardContainer }>
+              <div className={ styles.card }>
+                <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 } />
                 <div className={ styles.description }>
                   <p>intibiome agecare dryness relief intimate wash</p>
                 </div>
-                <div className={ styles.type }>
+                <div className={ styles.agecare }>
                   <p >agecare</p>
                 </div>
               </div>
@@ -113,7 +104,7 @@ const IndexPage = () => {
           />}
         </section>
 
-        <section className={ styles.section }>
+        {/* <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>keep up to date with our discoveries</h2>
           <div className={ styles.articles }>
             <div className={ styles.articleCard }>
@@ -142,7 +133,7 @@ const IndexPage = () => {
             </div>
           </div>
           <button className={ styles.button }>see more</button>
-        </section>
+        </section> */}
       </main>
     </Layout>
   )
