@@ -21,13 +21,19 @@
   cd intibiome-web-page/
   ```
 
-2.  **Run the project locally**
+2.  **Install all dependencies**
+
+  ```shell
+  npm i
+  ```
+
+3.  **Run the project locally**
 
   ```shell
   npx gatsby develop
   ```
 
-3.  **View the website**
+4.  **View the website**
 
   Go to `http://localhost:8000` in your favorite browser
 
