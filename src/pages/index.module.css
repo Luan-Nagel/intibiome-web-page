@@ -4,7 +4,8 @@
 
 .sectionTitle {
   margin: 80px auto 50px;
-  width: 744px;
+  padding: 0;
+  width: 734px;
   color: #389cd6;
   font-size: 39px;
   line-height: 50px;
@@ -23,7 +24,7 @@
 }
 
 .sectionTextTwo {
-  width: 744px;
+  width: 734px;
 }
 
 .articles,
@@ -109,19 +110,31 @@
   letter-spacing: 0.4px;
   color: #fff;
   transition: 0.3s;
-  margin: 60px 0 90px;
+  margin: 60px auto 90px;
 }
 
 .button:hover {
   background-color: #2b7cab;
 }
 
+.productsBanner {
+  margin-top: '80px';
+}
 
 
-.slider {
+
+
+.slider,
+.sliderArticles {
   width: 90vw;
   max-width: 1150px;
   margin: 0 auto;
+  padding: 0;
+}
+
+.sliderArticles {
+  display: flex;
+  flex-direction: column;
 }
 
 .cardContainer {
@@ -136,7 +149,8 @@
   margin: 0 auto;
 }
 
-.description {
+.description,
+.articleDescription {
   height: 120px;
   font-size: 20px;
   line-height: 28px;
@@ -146,7 +160,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 auto;
+}
+
+.articleDescription {
+  /* text-align: left; */
 }
 
 .wellness,
@@ -181,7 +199,10 @@
 }
 
 @media (max-width: 750px) {
-  .sectionTitle, 
+  .sectionTitle {
+    width: 350px;
+  }
+
   .sectionText, 
   .sectionTextTwo {
     width: 392px;
@@ -200,12 +221,24 @@
     letter-spacing: 0.32px;
   }
 
+  .articleDescription {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.35px;
+  }
+
   .card{
     width: 60vw;
+    overflow: hidden;
   }
 
   .cardContainer {
     padding: 0;
+  }
+
+  .slider {
+    width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -213,12 +246,10 @@
   .sectionTitle, .sectionText, .sectionTextTwo {
     width: 90vw;
   }
+}
 
-  /* .card{
-    width: 70vw;
-  } */
-
-  /* .slider {
-    width: 95vw;
-  } */
+@media (max-width: 360px) {
+  .button {
+    width: 85vw;
+  }
 }

@@ -104,36 +104,42 @@ const IndexPage = () => {
           />}
         </section>
 
-        {/* <section className={ styles.section }>
+        <section className={ styles.sliderArticles }>
           <h2 className={ styles.sectionTitle }>keep up to date with our discoveries</h2>
-          <div className={ styles.articles }>
-            <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2@2x.png' 
-                alt='Woman wearing sportswear and laughing' quality={ 90 }
-              />
-              <div className={ styles.articleSummary }>
-                <p style={{ textAlign: 'left' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Slider {...sliderSettings}>
+            <div className={ styles.cardContainer }>
+              <div className={ styles.card }>
+                <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2.png' 
+                  alt='Woman wearing sportswear and laughing' quality={ 90 }
+                />
+                <div className={ styles.articleDescription }>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
-            <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1@2x.png' 
-                alt='Middle aged woman smiling' quality={ 90 }
-              />
-              <div className={ styles.articleSummary }>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className={ styles.cardContainer }>
+              <div className={ styles.card }>
+                <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1.png' 
+                  alt='Middle aged woman smiling' quality={ 90 }
+                />
+                <div className={ styles.articleDescription }>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
-            <div className={ styles.articleCard }>
-              <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47@2x.png' 
-                alt='Lorem ipsum dolor sit amet' quality={ 90 }
-              />
-              <div className={ styles.articleSummary }>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className={ styles.cardContainer }>
+              <div className={ styles.card }>
+                <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47.png' 
+                  alt='Lorem ipsum dolor sit amet' quality={ 90 }
+                />
+                <div className={ styles.articleDescription }>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Slider>
           <button className={ styles.button }>see more</button>
-        </section> */}
+        </section>
       </main>
     </Layout>
   )
