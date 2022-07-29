@@ -24,7 +24,7 @@
 2.  **Run the project locally**
 
   ```shell
-  npm run develop
+  npx gatsby develop
   ```
 
 3.  **View the website**
