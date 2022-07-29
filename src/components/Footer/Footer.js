@@ -4,7 +4,7 @@ import { FOOTER_NAV } from '../../constants/footer'
 import useWindowSize from "../../hooks/useWindowSize"
 import * as styles from './Footer.module.css'
 
-
+/** Component for page footer */
 const Footer = () => {
 
   const { width } = useWindowSize()

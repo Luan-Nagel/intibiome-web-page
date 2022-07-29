@@ -39,12 +39,11 @@ const IndexPage = () => {
               feel confident in your personal care.
             </p>
           </div>
-          <StaticImage src='../assets/icons/icons@2x.png' alt='icones' quality={ 90 } />
+          <StaticImage src='../assets/icons/icons.png' alt='icones' quality={ 90 } />
         </section>
-
         <section className={ styles.section }>
           <h2 className={ styles.sectionTitle }>whatever your age. whatever your lifestyle. whatever your interests.</h2>
-          <div className={ styles.sectionTextTwo }>
+          <div className={ styles.sectionTextLg }>
             <p>
               Co-created with gynaecologists, our revolutionary products have been expertly developed to 
               support your intimate microbiome and pH balance, and strengthen overall natural health.
@@ -55,61 +54,54 @@ const IndexPage = () => {
             </p>
           </div>
         </section>
-
-        <section className={ styles.slider }>
+        <section className={ styles.sliderProducts }>
           <h2 className={ styles.sectionTitle }>our products</h2>
           <Slider {...sliderSettings}>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/image mask-2@2x.png' alt='Agecare' quality={ 90 }/>
-                <div className={ styles.description }>
+                <StaticImage src='../assets/images/prod-wellness.png' alt='Agecare' quality={ 90 }/>
+                <div className={ styles.productDescription }>
                   <p>intibiome wellness daily intimate wash</p>
                 </div>
                 <div className={ styles.wellness }>
-                  <p >wellness</p>
+                  <p>wellness</p>
                 </div>
               </div>
             </div>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/image mask-1@2x.png' alt='Agecare' quality={ 90 }/>
-                <div className={ styles.description }>
+                <StaticImage src='../assets/images/prod-active.png' alt='Agecare' quality={ 90 }/>
+                <div className={ styles.productDescription }>
                   <p>intibiome active extra protection intimate wash</p>
                 </div>
                 <div className={ styles.active }>
-                  <p >active</p>
+                  <p>active</p>
                 </div>
               </div>
             </div>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/image mask@2x.png' alt='Agecare' quality={ 90 } />
-                <div className={ styles.description }>
+                <StaticImage src='../assets/images/prod-agecare.png' alt='Agecare' quality={ 90 } />
+                <div className={ styles.productDescription }>
                   <p>intibiome agecare dryness relief intimate wash</p>
                 </div>
                 <div className={ styles.agecare }>
-                  <p >agecare</p>
+                  <p>agecare</p>
                 </div>
               </div>
             </div>
           </Slider>
         </section>
-
         <section style={{ marginTop: '80px' }}>
-          { !isMobile && <StaticImage src='../assets/images/Asset22@2x.png' alt='Products banner'
-            quality={ 90 }
-          /> }
-          { isMobile && <StaticImage src='../assets/images/banner-intibiome-05@2x.png' alt='Products banner'
-            quality={ 90 }
-          />}
+          { !isMobile && <StaticImage src='../assets/images/banner-products.png' alt='Products banner' quality={ 90 }/> }
+          { isMobile && <StaticImage src='../assets/images/banner-products-mobile.png' alt='Products banner' quality={ 90 }/>}
         </section>
-
         <section className={ styles.sliderArticles }>
           <h2 className={ styles.sectionTitle }>keep up to date with our discoveries</h2>
           <Slider {...sliderSettings}>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-2.png' 
+                <StaticImage src='../assets/images/article1.png' 
                   alt='Woman wearing sportswear and laughing' quality={ 90 }
                 />
                 <div className={ styles.articleDescription }>
@@ -119,7 +111,7 @@ const IndexPage = () => {
             </div>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47-1.png' 
+                <StaticImage src='../assets/images/article2.png' 
                   alt='Middle aged woman smiling' quality={ 90 }
                 />
                 <div className={ styles.articleDescription }>
@@ -129,7 +121,7 @@ const IndexPage = () => {
             </div>
             <div className={ styles.cardContainer }>
               <div className={ styles.card }>
-                <StaticImage src='../assets/images/Screen Shot 2021-02-26 at 17.23.47.png' 
+                <StaticImage src='../assets/images/article3.png' 
                   alt='Lorem ipsum dolor sit amet' quality={ 90 }
                 />
                 <div className={ styles.articleDescription }>

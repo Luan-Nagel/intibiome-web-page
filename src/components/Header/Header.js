@@ -6,14 +6,16 @@ import menuIcon from '../../assets/icons/ic-menu.svg'
 import searchIcon from '../../assets/icons/ic-search.svg'
 import angleDownIcon from '../../assets/icons/angle-down-solid.svg'
 import closeIcon from '../../assets/icons/xmark-solid.svg'
-import bannerDesktop from '../../assets/images/banner-hero@2x.png'
-import bannerMobile from '../../assets/images/banner-intibiome-02@2x.png'
-import { NAVIGATION_ITEMS } from '../../constants/indexPage'
+import bannerDesktop from '../../assets/images/banner-header.png'
+import bannerMobile from '../../assets/images/banner-header-mobile.png'
+import { NAVIGATION_ITEMS } from '../../constants/header'
 
+/** Component for page header */
 const Header = () => {
 
   const { width } = useWindowSize()
-  const isMobile = width < 600
+  const isMobileMd = width < 800
+  const isMobileSm = width < 600
 
   const [options, setOptions] = useState(null)
 
@@ -37,14 +39,14 @@ const Header = () => {
     <header >
       <div className={ styles.imgsContainer }>
         <div style={{ width: '24px' }}>
-          { isMobile && <img src={ options ? closeIcon : menuIcon } alt='Mobile menu icon' 
-            onClick={ handleMenuClick }
+          { isMobileMd && <img src={ options ? closeIcon : menuIcon } alt='Mobile menu icon' 
+            onClick={ handleMenuClick } role='presentation'
           /> }
         </div>
-        <img src={ intibiomeLogo } width={ isMobile ? 143 : 195 } height={ isMobile ? 58 : 79 } alt='kk' />
+        <img src={ intibiomeLogo } width={ isMobileMd ? 143 : 195 } height={ isMobileMd ? 58 : 79 } alt='kk' />
         <img src={ searchIcon } alt='Search icon' />
       </div>
-      { !isMobile && <div style={{ position: 'relative' }} onMouseLeave={ handleMouseHover() }>
+      { !isMobileMd && <div style={{ position: 'relative' }} onMouseLeave={ handleMouseHover() } role='presentation'>
         <div className={ styles.navContainer }>
           <div className={ styles.nav }>
             <span className={ styles.navItem } role='presentation' onMouseEnter={ handleMouseHover('about') }>
@@ -56,22 +58,24 @@ const Header = () => {
             <span className={ styles.navItem } role='presentation' onMouseEnter={ handleMouseHover('health') }>
               intimate health <img className={ styles.angleDownIcon } src={ angleDownIcon } alt='Angle down icon'/>
             </span>
-            <span className={ styles.navItem }>contact us</span>
+            <span className={ styles.navItem } role='presentation' onMouseEnter={ handleMouseHover() }>
+              contact us
+            </span>
           </div>
         </div>
-        { options && <div className={ styles.optionsContainer } style={{ position: 'absolute' }}>
+        { options && <div className={ styles.optionsContainer }>
           { options.map(item => (
             <span className={ styles.option } key={ item.key }>{ item.label }</span>
           )) }
         </div> }
       </div> }
-      { isMobile && options && <div className={ styles.navContainerMobile }>
+      { isMobileMd && options && <div className={ styles.navContainerMobile }>
         { options.map(item => (
           <span className={ styles.option } key={ item.key }>{ item.label }</span>
         )) }
       </div> }
-      { !isMobile && <img src={ bannerDesktop } alt='Banner hero' width='100%' /> }
-      { isMobile && <img src={ bannerMobile } alt='Banner mobile' width='100%' /> }
+      { !isMobileSm && <img src={ bannerDesktop } alt='Banner hero' width='100%' /> }
+      { isMobileSm && <img src={ bannerMobile } alt='Banner mobile' width='100%' /> }
     </header>
   )
 }
